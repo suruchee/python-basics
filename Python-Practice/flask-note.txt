@@ -1,0 +1,18 @@
+cd Python-practice/flask
+virtualenv env
+cd env
+dir
+cd Scripts
+dir
+activate
+cd..
+cd..
+#install flask
+pip install flask
+python
+from flask import Flask
+mkdir static
+mkdir templates
+cd static
+mkdir css js images
+D:\Python-Practice\flask>python app.py

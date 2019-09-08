@@ -1,0 +1,76 @@
+easy_install django==1.11.2
+django-admin startproject mysite
+D:\Python-Practice\django\mysite>python manage.py runserver
+django-admin startapp books
+python manage.py runserver
+python manage.py migrate
+python manage.py makemigrations books
+python manage.py sqlmigrate books 0001
+python manage.py migrate
+//store info
+python manage.py shell
+>>>from books.models import Book
+Book.objects.all()
+a=Book()
+]: a.name="Life"
+
+In [6]: a.authors="ABC"
+
+In [7]: a.price="10"
+
+In [8]: a.type="Business"
+
+In [9]: a.save()
+a.name
+a.author
+
+In [12]: b=Book()
+
+In [13]: b.name="Sucess"
+
+In [14]: b.name="XYZ"
+
+In [15]: b.price="30"
+
+In [16]: b.type="fiction"
+b.save()
+a.id=1
+b.id=2
+a.pk=1
+Book.objects.all()
+exit()
+>python manage.py shell
+
+In [1]: from books.models import Book
+
+In [2]: Book.objects.all()
+Out[2]: <QuerySet [<Book: Life->, <Book: XYZ->]>
+
+In [3]: Book.objects.filter(id=1)
+Out[3]: <QuerySet [<Book: Life->]>
+
+http://127.0.0.1:8000/books/
+http://127.0.0.1:8000/admin/
+
+manage.py createsuperuser
+Username (leave blank to use 'lenovo'): http://127.0.0.1:8000/books/suruchi
+Error: Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.
+Username (leave blank to use 'lenovo'): suruchi
+Email address: suruchee11@gmail.com
+
+
+from django.contrib import admin
+from .models import Photo
+
+# Register your models here.
+admin.site.register(Photo)
+
+
+************virtualenv
+easy_install virtualenv
+D:\Python-Practice\django>virtualenv pro
+cd pro
+dir
+cd Scripts
+activate
+python manage.py migrate

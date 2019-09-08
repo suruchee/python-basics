@@ -1,0 +1,48 @@
+{% extends 'photos/base.html' %}
+{% block body %}
+
+<!--old code
+<img src="{‌{photo.photo_image}}"/>
+<h1>{‌{photo.name}}</h1>
+<h2>{‌{photo.author}}</h2>
+<h2>{‌{photo.price}}</h2>
+<h2>{‌{photo.type}}</h2>
+
+
+old code
+-->
+
+<div class="col-lg-3 col-md-4 col-sm-6 " >
+      <div class = "thumbnail">
+           <img src = "{‌{photo.photo_image}}" alt = "Generic placeholder thumbnail">
+
+
+         <div class = "caption">
+          <h3>{‌{photo.name}}</h3>
+          <p>{‌{photo.author}}</p>
+           <p></p>
+         </div>
+      </div>
+</div>
+
+<div class="col-lg-9 col-md-4 col-sm-6 " >
+      <div class="" >
+
+
+
+          <h3><b>{‌{photo.name}}</b></h3>
+          <p><b>Author:</b> {‌{photo.author}}</p>
+           <p><b>Price:</b> {‌{photo.price}}$</p>
+           <p><b>Category:</b> {‌{photo.type}}</p>
+
+            <a href = "#" class = "btn btn-danger" role = "button">
+                 Read Sample <span class="glyphicon glyphicon-photo"></span>
+              </a>
+
+
+      </div>
+</div>
+
+
+
+{% endblock %}
